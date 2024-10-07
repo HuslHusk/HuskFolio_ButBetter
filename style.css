@@ -262,6 +262,7 @@ button.copy-btn {
 @media screen and (max-width: 1024px) {
     #logo-container {
         margin-left: 0;
+        margin-right: 0;
         justify-content: center;
     }
 }
