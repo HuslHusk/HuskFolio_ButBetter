@@ -49,6 +49,7 @@ h3 a:hover {
 #logo-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-left: 220px;
 }
 
@@ -57,6 +58,14 @@ h3 a:hover {
     max-width: 700px;
     height: auto;
 }
+
+@media screen and (max-width: 1024px) {
+    #logo-container {
+        margin-left: 0;
+        justify-content: center;
+    }
+}
+
 
 #logo img {
     width: 100%;
@@ -67,37 +76,106 @@ h3 a:hover {
     border-width: 15px;
 }
 
+/* Container styling */
 .container {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align items from the top */
     margin-top: 0px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
+/* Left-aligned container */
 .left {
-    margin-left: 230px;
+    margin-left: 230px; /* Space for sidebar */
 }
 
+/* Right-aligned container */
 .right {
-    margin-left: auto;
-    margin-right: 20px;
-    justify-content: flex-end;
+    margin-left: auto; /* Push to the right */
+    margin-right: 20px; /* Add some space to the right */
+    justify-content: flex-start; /* Align content from the top */
+    align-items: flex-start; /* Ensure image and text are top-aligned */
 }
 
+/* Text styling */
 .text {
     margin-left: 20px;
-    max-width: calc(100% - 240px);
+    max-width: calc(100% - 240px); /* Adjust for sidebar */
     text-align: left;
 }
 
+/* Right text adjustment */
 .right .text {
     margin-right: 20px;
-    margin-left: 200px;
-    max-width: calc(100% - 460px);
+    margin-left: 200px; /* Keep left margin for alignment */
+    max-width: calc(100% - 460px); /* Adjust for sidebar */
     text-align: right;
 }
 
+/* Media queries for responsiveness */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center; /* Center items */
+        margin: 0;
+    }
+
+    .left, .right {
+        margin-left: 0; /* Reset margins for smaller screens */
+        margin-right: 0;
+        width: 100%; /* Take full width */
+    }
+
+    .text {
+        max-width: 100%;
+        margin-left: 0; /* Reset margins */
+        margin-right: 0;
+        text-align: center; /* Center text */
+    }
+
+    /* Swap the order of image and text on smaller screens */
+    .right {
+        flex-direction: column; /* Ensure stacking */
+    }
+
+    .right img {
+        order: 1; /* Position the image first */
+        margin-top: 10px; /* Add space between image and text */
+    }
+
+    .right .text {
+        max-width: 100%;
+        margin-left: 0; /* Reset margins */
+        margin-right: 0;
+        text-align: center;
+        order: 2; /* Position the text second */
+    }
+
+    #sidebar {
+        display: none; /* Hides the sidebar on smaller screens */
+    }
+}
+
+/* Media queries for mobile devices */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Stack containers vertically on small screens */
+        margin-top: 20px;
+    }
+
+    img {
+        width: 100%;
+        height: auto; /* Keep aspect ratio */
+    }
+
+    .text {
+        text-align: center;
+        padding: 0 10px; /* Add padding for smaller screens */
+    }
+}
+
 #artstuff {
-    margin-left: 220px;
+    margin-left: 220px; /* Space for sidebar */
     text-align: center;
 }
 
@@ -193,11 +271,11 @@ button.copy-btn {
 }
 
 #contacts {
-    margin-left: 220px;
+    margin-left: 220px; /* Space for sidebar */
     font-size: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center contacts */
 }
 
 #contacts span {
