@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/24608cecea.js" crossorigin="anonymous"></script>
+    <title>Huskfolio</title>
+</head>
+
+<body>
+
+    <div id="sidebar" aria-label="Navigation">
+        <h2><b>Huskfolio</b></h2>
+        <a href="index.html">
+            <img id="husk1" src="Images/Image1.png" alt="A character that is bored">
+        </a>
+
+        <h2>
+            <a href="art.html">Art</a><br>
+            <a href="about_me.html">About Me</a><br>
+            <a href="contact.html">Contact</a><br>
+            <a href="commissions.html">Commissions</a><br>
+        </h2>
+    </div>
+
+    <div id="logo-container">
+        <div id="logo">
+            <img src="Images/Logo_Placeholder2.png" alt="A logo that says 'Contacts' with two stars on both sides">
+        </div>
+    </div>
+
+    <div id="contacts" role="main">
+        <span>
+            <i class="fa-solid fa-phone"></i>
+            <span id="phone">(313) 451-1063</span>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText('(313) 451-1063'); 
+                document.getElementById('phone-copied').classList.add('active'); 
+                setTimeout(() => document.getElementById('phone-copied').classList.remove('active'), 2000);">
+                <i class="fa-solid fa-copy"></i>
+            </button>
+            <span class="copied" id="phone-copied">Copied!</span>
+        </span>
+
+        <br>
+
+        <span>
+            <a href="https://steamcommunity.com/profiles/76561199175868207/" target="_blank">
+                <i class="fa-brands fa-steam"></i>
+                <span id="steam-link">Huslhusk</span>
+            </a>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText('huslhusk'); 
+                document.getElementById('steam-copied').classList.add('active'); 
+                setTimeout(() => document.getElementById('steam-copied').classList.remove('active'), 2000);">
+                <i class="fa-solid fa-copy"></i>
+            </button>
+            <span class="copied" id="steam-copied">Copied!</span>
+        </span>
+
+        <br>
+
+        <span>
+            <a href="https://www.tiktok.com/@huslhusk" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+                <span id="tiktok-link">@Huslhusk</span>
+            </a>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText('@huslhusk'); 
+                document.getElementById('tiktok-copied').classList.add('active'); 
+                setTimeout(() => document.getElementById('tiktok-copied').classList.remove('active'), 2000);">
+                <i class="fa-solid fa-copy"></i>
+            </button>
+            <span class="copied" id="tiktok-copied">Copied!</span>
+        </span>
+
+        <br>
+
+        <span>
+            <a href="https://www.youtube.com/@HuslHusk" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+                <span id="youtube-link">HuslHusk_TheMeme</span>
+            </a>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText('HuslHusk_TheMeme'); 
+                document.getElementById('youtube-copied').classList.add('active'); 
+                setTimeout(() => document.getElementById('youtube-copied').classList.remove('active'), 2000);">
+                <i class="fa-solid fa-copy"></i>
+            </button>
+            <span class="copied" id="youtube-copied">Copied!</span>
+        </span>
+
+        <br>
+
+        <span>
+            <i class="fa-brands fa-discord"></i>
+            <span id="discord">Huslhusk_thememe</span>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText('huslhusk_thememe'); 
+                document.getElementById('discord-copied').classList.add('active'); 
+                setTimeout(() => document.getElementById('discord-copied').classList.remove('active'), 2000);">
+                <i class="fa-solid fa-copy"></i>
+            </button>
+            <span class="copied" id="discord-copied">Copied!</span>
+        </span>
+
+        <br>
+
+        <span>
+            <i class="fa-sharp fa-solid fa-envelope"></i>
+            <span id="email">Huslhusk@gmail.com</span>
+            <button class="copy-btn" onclick="navigator.clipboard.writeText('huslhusk@gmail.com'); 
+                document.getElementById('email-copied').classList.add('active'); 
+                setTimeout(() => document.getElementById('email-copied').classList.remove('active'), 2000);">
+                <i class="fa-solid fa-copy"></i>
+            </button>
+            <span class="copied" id="email-copied">Copied!</span>
+        </span>
+    </div>
+
+    <div id="bottom-bar" aria-label="Navigation">
+        <a href="index.html">Home</a><br> 
+        <a href="art.html">Art</a><br>
+        <a href="about_me.html">About Me</a><br>
+        <a href="contact.html">Contact</a><br>
+        <a href="commissions.html">Commissions</a><br>
+    </div>
+</body>
+
+</html>
